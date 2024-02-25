@@ -4,32 +4,19 @@ package com.example.gozayaandemo.modules.contactDetails;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.gozayaandemo.R;
 import com.example.gozayaandemo.dataModels.Contact;
-import com.example.gozayaandemo.modules.contactList.ContactAdapter;
-import com.example.gozayaandemo.modules.contactList.ContactListContract;
-import com.example.gozayaandemo.modules.contactList.ContactListController;
-
-import java.util.List;
 
 public class ContactDetailsView extends AppCompatActivity implements ContactDetailsContract.View {
     private ContactDetailsContract.Controller controller;
@@ -136,7 +123,6 @@ public class ContactDetailsView extends AppCompatActivity implements ContactDeta
 
     @Override
     public boolean onSupportNavigateUp() {
-        // Handle back button press
         onBackPressed();
         return true;
     }

@@ -2,10 +2,10 @@ package com.example.gozayaandemo.modules.contactList;
 
 import android.text.TextUtils;
 
-import com.example.gozayaandemo.dataModels.Contact;
 import com.example.gozayaandemo.communication.ApiClient;
-import com.example.gozayaandemo.dataModels.ContactDetails;
 import com.example.gozayaandemo.communication.DataProviderService;
+import com.example.gozayaandemo.dataModels.Contact;
+import com.example.gozayaandemo.dataModels.ContactDetails;
 
 import java.util.ArrayList;
 import java.util.List;
