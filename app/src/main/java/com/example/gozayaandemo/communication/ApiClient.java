@@ -1,4 +1,4 @@
-package com.example.gozayaandemo.app;
+package com.example.gozayaandemo.communication;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -17,7 +17,7 @@ public class ApiClient {
         return retrofit;
     }
 
-    public static ContactService getContactService() {
-        return getClient().create(ContactService.class);
+    public static DataProviderService getContactService() {
+        return getClient().create(DataProviderService.class);
     }
 }

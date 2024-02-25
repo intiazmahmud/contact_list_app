@@ -1,7 +1,6 @@
-package com.example.gozayaandemo.app;
+package com.example.gozayaandemo.modules.contactList;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,15 +11,15 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.gozayaandemo.ContactDetailsActivity;
 import com.example.gozayaandemo.R;
+import com.example.gozayaandemo.dataModels.Contact;
+import com.example.gozayaandemo.modules.contactDetails.ContactDetailsView;
 
 import java.util.List;
 
 public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHolder> {
 
     private List<Contact> contacts;
-    protected Bitmap image;
 
     public ContactAdapter(List<Contact> contacts) {
         this.contacts = contacts;
@@ -42,7 +41,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
         holder.contactCard.setOnClickListener(
                 v -> {
-                    Intent intent = new Intent(holder.contactCard.getContext(), ContactDetailsActivity.class);
+                    Intent intent = new Intent(holder.contactCard.getContext(), ContactDetailsView.class);
                     holder.contactCard.getContext().startActivity(intent);
                 }
         );
@@ -50,12 +49,9 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(holder.itemView.getContext(), ContactDetailsActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), ContactDetailsView.class);
                 intent.putExtra("contact_data", contact);
                 holder.contactCard.getContext().startActivity(intent);
-
-//                String jsonString = new Gson().toJson(contact);
-//                intent.putExtra("contact_data", jsonString);
             }
         });
     }
@@ -73,7 +69,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private CardView contactCard;
+        CardView contactCard;
         ImageView imageView;
         TextView nameTextView;
         TextView phoneTextView;

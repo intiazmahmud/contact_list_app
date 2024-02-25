@@ -1,4 +1,6 @@
-package com.example.gozayaandemo.app;
+package com.example.gozayaandemo.dataModels;
+
+import com.example.gozayaandemo.dataModels.Contact;
 
 import java.util.List;
 

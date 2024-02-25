@@ -5,33 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ContactDetailsActivity">
+    tools:context=".modules.contactDetails.ContactDetailsView">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
-
-        <!--        <com.google.android.material.appbar.AppBarLayout-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:fitsSystemWindows="true">-->
-        <!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize" />
-
-        <!--        <androidx.appcompat.widget.Toolbar-->
-        <!--            android:id="@+id/toolbar"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="?attr/actionBarSize"-->
-        <!--            android:background="?attr/colorPrimary"-->
-        <!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />-->
 
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -47,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="18sp"
+            android:textSize="28sp"
             android:textStyle="bold" />
 
         <TextView
@@ -70,45 +56,81 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal"
-            android:paddingVertical="16dp">
+            android:paddingVertical="16dp"
+            android:weightSum="3">
 
-            <ImageButton
-                android:id="@+id/call_button"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="?selectableItemBackgroundBorderless"
-                android:paddingHorizontal="10dp"
-                android:src="@drawable/ic_call" />
+                android:background="@drawable/rounded_layout_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="8dp"
+                android:paddingVertical="8dp">
 
-            <ImageButton
-                android:id="@+id/message_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="?selectableItemBackgroundBorderless"
-                android:paddingHorizontal="10dp"
-                android:src="@drawable/ic_message" />
+                <Button
+                    android:id="@+id/call_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:text="Call"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/ic_call"
+                    android:textSize="16sp"/>
 
-            <ImageButton
-                android:id="@+id/email_button"
-                android:layout_width="wrap_content"
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="?selectableItemBackgroundBorderless"
-                android:paddingHorizontal="10dp"
-                android:src="@drawable/ic_email" />
+                android:background="@drawable/rounded_layout_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="8dp"
+                android:paddingVertical="8dp">
+
+                <Button
+                    android:id="@+id/message_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:text="Message"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/ic_message"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_layout_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="8dp"
+                android:paddingVertical="8dp">
+
+                <Button
+                    android:id="@+id/email_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:text="Email"
+                    android:textColor="@color/black"
+                    android:drawableTop="@drawable/ic_email"
+                    android:textSize="16sp"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
 
     </LinearLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        android:visibility="gone"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

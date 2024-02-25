@@ -1,4 +1,4 @@
-package com.example.gozayaandemo.app;
+package com.example.gozayaandemo.dataModels;
 
 import android.os.Parcel;
 import android.os.Parcelable;
