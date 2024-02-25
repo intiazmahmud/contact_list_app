@@ -42,7 +42,7 @@ public class ContactDetailsView extends AppCompatActivity implements ContactDeta
         phoneTextView = findViewById(R.id.phone_text_view);
         emailTextView = findViewById(R.id.email_text_view);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Contact Details");
+        getSupportActionBar().setTitle("");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initializeCallButtonAction();
         initializeMessageButtonAction();

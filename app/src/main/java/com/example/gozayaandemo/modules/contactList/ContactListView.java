@@ -47,6 +47,7 @@ public class ContactListView extends AppCompatActivity implements ContactListCon
         progressBar = findViewById(R.id.progress_bar);
         progressBar.setVisibility(View.VISIBLE);
         searchBar = findViewById(R.id.search_bar);
+        searchBar.clearFocus();
     }
 
     private void setupSearchBar() {
